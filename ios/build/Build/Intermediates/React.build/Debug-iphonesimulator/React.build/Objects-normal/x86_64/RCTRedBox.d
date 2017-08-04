@@ -1,0 +1,24 @@
+dependencies: \
+  /Users/hong/Documents/sourcecode/reactNative/demo/node_modules/react-native/React/Modules/RCTRedBox.m \
+  /Users/hong/Documents/sourcecode/reactNative/demo/node_modules/react-native/React/Modules/RCTRedBox.h \
+  /Users/hong/Documents/sourcecode/reactNative/demo/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/hong/Documents/sourcecode/reactNative/demo/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/hong/Documents/sourcecode/reactNative/demo/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/hong/Documents/sourcecode/reactNative/demo/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/hong/Documents/sourcecode/reactNative/demo/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/hong/Documents/sourcecode/reactNative/demo/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/hong/Documents/sourcecode/reactNative/demo/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/hong/Documents/sourcecode/reactNative/demo/node_modules/react-native/React/Base/RCTErrorCustomizer.h \
+  /Users/hong/Documents/sourcecode/reactNative/demo/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/hong/Documents/sourcecode/reactNative/demo/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/hong/Documents/sourcecode/reactNative/demo/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/hong/Documents/sourcecode/reactNative/demo/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/hong/Documents/sourcecode/reactNative/demo/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/hong/Documents/sourcecode/reactNative/demo/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/hong/Documents/sourcecode/reactNative/demo/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/hong/Documents/sourcecode/reactNative/demo/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/hong/Documents/sourcecode/reactNative/demo/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/hong/Documents/sourcecode/reactNative/demo/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/hong/Documents/sourcecode/reactNative/demo/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/hong/Documents/sourcecode/reactNative/demo/node_modules/react-native/React/Base/RCTErrorInfo.h \
+  /Users/hong/Documents/sourcecode/reactNative/demo/node_modules/react-native/React/Base/RCTJSStackFrame.h

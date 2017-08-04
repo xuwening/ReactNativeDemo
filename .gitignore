@@ -1,0 +1,4 @@
+*.lock
+__tests__
+jsconfig.json
+node_modules
