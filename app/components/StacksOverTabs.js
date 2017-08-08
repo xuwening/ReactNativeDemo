@@ -15,6 +15,7 @@ import SecondView from './secondView'
 import HomePage from './homePage'
 import Mine from './Mine'
 import Chat from './Chat'
+import Shopping from './shopping'
 
 const MyNavScreen = ({ navigation, banner }) => (
   <ScrollView>
@@ -60,7 +61,7 @@ const MyCatsScreen = ({ navigation }) => (
 
 
 const MyShoppingScreen = ({ navigation }) => (
-  <MyNavScreen banner="Settings Screen" navigation={navigation} />
+  <Shopping banner="Settings Screen" navigation={navigation} />
 );
 
 
