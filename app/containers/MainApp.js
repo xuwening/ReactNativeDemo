@@ -14,7 +14,7 @@ import StacksOverTabs from '../components/StacksOverTabs'
 // @connect(state => ({
 //   state: state.counter
 // }))
-class MainApp extends Component {
+export default class MainApp extends Component {
 
 
   render() {
@@ -29,7 +29,7 @@ class MainApp extends Component {
 }
 
 
-export default connect(state => ({
-    homeReducer: state.homeReducer
-  })
-)(MainApp);
+// export default connect(state => ({
+//     homeReducer: state.homeReducer
+//   })
+// )(MainApp);
