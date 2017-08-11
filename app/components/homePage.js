@@ -6,6 +6,7 @@ import { StackNavigator } from 'react-navigation';
 import IconList from './iconList'
 import Banner from './banner';
 import HomeNavBar from './HomeNavBar'
+import WebViewContainer from './webviewContainer'
 
 export default class HomePage extends React.Component {
 
@@ -60,9 +61,7 @@ export default class HomePage extends React.Component {
                     }
                 >
 
-                    {/*<HomeNavBar navigation={navigation}></HomeNavBar>*/}
-                    
-                    <Banner></Banner>
+                    <Banner navigation={navigation}></Banner>
                     <IconList navigation={navigation}></IconList>
                     <View style={{flex: 1, marginTop: 40}}>
                         <Button
@@ -79,7 +78,9 @@ export default class HomePage extends React.Component {
                         />
                         <Button onPress={() => navigation.goBack(null)} title="Go back" />
                     </View>
+                    <WebViewContainer webViewUrl='https://www.baidu.com' style={{height:800}}/>
                 </ScrollView>
+                
                 <HomeNavBar style={{position: 'absolute', top:0, left: 0, height:64, width:375, backgroundColor: 'transparent'}} navigation={navigation}></HomeNavBar>
                 {/*<View style={{position: 'absolute', height:64, width:375, backgroundColor: 'transparent'}}></View>*/}
             </View>

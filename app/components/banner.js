@@ -5,6 +5,7 @@ import {
   Text,
   View,
   Image,
+  TouchableOpacity
 } from 'react-native';
 
 import Swiper from 'react-native-swiper';
@@ -45,25 +46,25 @@ export default class Banner extends React.Component {
         }
     }
 
+    imagePressed(url) {
+
+      this.props.navigation.navigate('secondPage', { actionUrl: url })
+    }
+
     render() {
 
+        imgs = Object.values(ImageRes)
+        
         return (
             
-	        <Swiper style={styles.wrapper} autoplay={true} height={140} >
-
-				  <View style={styles.slide}>
-		            <Image style={styles.image} source={{uri: ImageRes.pic1}} />
-		          </View>
-				  <View style={styles.slide}>
-		            <Image style={styles.image} source={{uri: ImageRes.pic2}} />
-		          </View>
-				  <View style={styles.slide}>
-		            <Image style={styles.image} source={{uri: ImageRes.pic3}} />
-		          </View>
-				  <View style={styles.slide}>
-		            <Image style={styles.image} source={{uri: ImageRes.pic4}} />
-		          </View>
-
+          <Swiper style={styles.wrapper} autoplay={true} height={140}>
+            {
+              imgs.map((url) => (
+                <TouchableOpacity style={styles.slide} onPress={() => this.imagePressed(url)}>
+                  <Image style={styles.image} source={{uri: url}} />
+                </TouchableOpacity>
+              ))
+            }
 			  </Swiper>            
         )
     }

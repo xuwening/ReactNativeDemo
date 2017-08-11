@@ -14,7 +14,7 @@ export default class WebViewContainer extends Component {
                 <WebView
                         ref={'webView'}
                         automaticallyAdjustContentInsets={false}
-                        style={{flex:1}}
+                        style={{flex:1, ...this.props.style}}
                         source={{uri: this.props.webViewUrl}}
                         javaScriptEnabled={true}
                         domStorageEnabled={true}
