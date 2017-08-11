@@ -17,6 +17,7 @@ export default class HomePage extends React.Component {
             loaded: 0,
             rowData: Array.from(new Array(20)).map(
                 (val, i) => ({text: 'Initial row ' + i, clicks: 0})),
+            navBarColor: 'rgba(255, 55, 55, 0.8)'
         }
     }
 
@@ -37,7 +38,12 @@ export default class HomePage extends React.Component {
             rowData: rowData,
         });
         }, 5000);
-    }  
+    }
+
+    changeNavBarColor(offset) {
+        alpha = offset < 0 ? 0 : offset > 80 ? 0.8 : offset / 100
+        this.setState({navBarColor: `rgba(255, 55, 55, ${alpha})`})
+    }
 
     render() {
 
@@ -47,7 +53,9 @@ export default class HomePage extends React.Component {
             <View style={{flex:1}}>
                 
                 <ScrollView
-                    
+                    ref={(scrollView) => this._scrollView = scrollView}
+                    onScroll={(e) => this.changeNavBarColor(e.nativeEvent.contentOffset.y)}
+                    scrollEventThrottle={100}
                     refreshControl={
                         <RefreshControl
                             refreshing={this.state.isRefreshing}
@@ -81,7 +89,7 @@ export default class HomePage extends React.Component {
                     <WebViewContainer webViewUrl='https://www.baidu.com' style={{height:800}}/>
                 </ScrollView>
                 
-                <HomeNavBar style={{position: 'absolute', top:0, left: 0, height:64, width:375, backgroundColor: 'transparent'}} navigation={navigation}></HomeNavBar>
+                <HomeNavBar style={{position: 'absolute', top:0, left: 0, height:64, width:375, backgroundColor: this.state.navBarColor}} navigation={navigation}></HomeNavBar>
                 {/*<View style={{position: 'absolute', height:64, width:375, backgroundColor: 'transparent'}}></View>*/}
             </View>
         )
