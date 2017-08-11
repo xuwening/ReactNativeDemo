@@ -39,7 +39,6 @@ const TitleButton = ({navation, titleName}) => (
 
     <View>
         <Text>{titleName}</Text>
-        
     </View>
 )
 
@@ -50,8 +49,8 @@ export default class HomeNavBar extends React.Component {
 
         return (
                 <NavigationBar
-                    containerStyle={{backgroundColor: 'transparent'}}
-                    title={<TitleButton navigation={this.props.navigation} titleName='hello'/>}
+                    containerStyle={this.props.style}
+                    title={<TitleButton navigation={this.props.navigation} titleName='西安'/>}
                     lefgButton={<LeftButton navigation={this.props.navigation}/>}
                     rightButton={<RightView navigation={this.props.navigation}/>}
                 />

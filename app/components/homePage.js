@@ -41,50 +41,48 @@ export default class HomePage extends React.Component {
     render() {
 
         const navigation = this.props.navigation
-        const titleConfig = {
-            title: 'hello',
-        }
-
-        const rightButtonConfig = {
-              title: 'Next',
-              handler: () => alert('hello!'),
-        }
 
         return (
-            <ScrollView
+            <View style={{flex:1}}>
                 
-                refreshControl={
-                    <RefreshControl
-                        refreshing={this.state.isRefreshing}
-                        onRefresh={this._onRefresh.bind(this)}
-                        tintColor="#ff0000"
-                        title="Loading..."
-                        titleColor="#00ff00"
-                        colors={['#ff0000', '#00ff00', '#0000ff']}
-                        progressBackgroundColor="#ffff00"
-                    />
-                }
-            >
+                <ScrollView
+                    
+                    refreshControl={
+                        <RefreshControl
+                            refreshing={this.state.isRefreshing}
+                            onRefresh={this._onRefresh.bind(this)}
+                            tintColor="#ff0000"
+                            title="Loading..."
+                            titleColor="#00ff00"
+                            colors={['#ff0000', '#00ff00', '#0000ff']}
+                            progressBackgroundColor="#ffff00"
+                        />
+                    }
+                >
 
-                {/*<HomeNavBar navigation={navigation}></HomeNavBar>*/}
-                <Banner></Banner>
-                <IconList navigation={navigation}></IconList>
-                <View style={{flex: 1, marginTop: 40}}>
-                    <Button
-                    onPress={() => navigation.navigate('Profile', { name: 'Jordan' })}
-                    title="Open profile screen"
-                    />
-                    <Button
-                    onPress={() => navigation.navigate('NotifSettings')}
-                    title="Open notifications screen"
-                    />
-                    <Button
-                    onPress={() => navigation.navigate('SettingsTab')}
-                    title="Go to settings tab"
-                    />
-                    <Button onPress={() => navigation.goBack(null)} title="Go back" />
-                </View>
-            </ScrollView>
+                    {/*<HomeNavBar navigation={navigation}></HomeNavBar>*/}
+                    
+                    <Banner></Banner>
+                    <IconList navigation={navigation}></IconList>
+                    <View style={{flex: 1, marginTop: 40}}>
+                        <Button
+                        onPress={() => navigation.navigate('Profile', { name: 'Jordan' })}
+                        title="Open profile screen"
+                        />
+                        <Button
+                        onPress={() => navigation.navigate('NotifSettings')}
+                        title="Open notifications screen"
+                        />
+                        <Button
+                        onPress={() => navigation.navigate('SettingsTab')}
+                        title="Go to settings tab"
+                        />
+                        <Button onPress={() => navigation.goBack(null)} title="Go back" />
+                    </View>
+                </ScrollView>
+                <HomeNavBar style={{position: 'absolute', top:0, left: 0, height:64, width:375, backgroundColor: 'transparent'}} navigation={navigation}></HomeNavBar>
+                {/*<View style={{position: 'absolute', height:64, width:375, backgroundColor: 'transparent'}}></View>*/}
+            </View>
         )
     }
 }
