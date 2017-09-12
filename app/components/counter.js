@@ -42,6 +42,9 @@ class Counter extends Component {
         <TouchableOpacity onPress={actions.decrement} style={styles.button}>
           <Text>down</Text>
         </TouchableOpacity>
+        <TouchableOpacity onPress={actions.incrementAsync} style={styles.button}>
+          <Text>up(async)</Text>
+        </TouchableOpacity>
       </View>
     );
   }

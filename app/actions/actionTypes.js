@@ -5,3 +5,5 @@ export const DECREMENT = 'DECREMENT';
 export const OTHERMENT = 'OTHERMENT';
 export const TEXTINPUT = 'TEXTINPUT';
 export const UPDATEPICS = 'UPDATEPICS';
+
+export const INCREMENTASYNC = 'INCREMENTASYNC';

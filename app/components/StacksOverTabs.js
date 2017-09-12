@@ -17,6 +17,8 @@ import Mine from './Mine'
 import Chat from './Chat'
 import Shopping from './shopping'
 
+import BusinessPage from './businessPage'
+
 const MyNavScreen = ({ navigation, banner }) => (
   <ScrollView>
     <SampleText>{banner}</SampleText>
@@ -52,7 +54,8 @@ const MyNotificationsSettingsScreen = ({ navigation }) => (
 );
 
 const MySettingsScreen = ({ navigation }) => (
-  <Counter banner="Settings Screen" navigation={navigation} />
+  // <Counter banner="Settings Screen" navigation={navigation} />
+  <BusinessPage navigation={navigation} />
 );
 
 const MyCatsScreen = ({ navigation }) => (
@@ -127,7 +130,7 @@ const TabNav = TabNavigator(
         title: 'cats',
         tabBarIcon: ({ tintColor, focused }) => (
           <Ionicons
-            name={focused ? 'ios-cart' : 'ios-cart-outline'}
+            name={focused ? 'ios-cart' : 'fa-search'}
             size={26}
             style={{ color: tintColor }}
           />
