@@ -130,7 +130,7 @@ const TabNav = TabNavigator(
         title: 'cats',
         tabBarIcon: ({ tintColor, focused }) => (
           <Ionicons
-            name={focused ? 'ios-cart' : 'fa-search'}
+            name={focused ? 'ios-cart' : 'ios-cart-outline'}
             size={26}
             style={{ color: tintColor }}
           />

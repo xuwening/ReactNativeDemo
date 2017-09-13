@@ -30,8 +30,8 @@ const styles = StyleSheet.create({
     },
 
     iconText: {
-        color: 'gray',
-        fontSize: 10,
+        
+        fontSize: 8,
         paddingTop: 10,
         paddingBottom: 10,
     },

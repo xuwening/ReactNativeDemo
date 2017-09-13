@@ -11,6 +11,8 @@ import * as counterActions from '../actions/BusinessPageAction';
 import {bindActionCreators} from 'redux';
 
 import IconComponent from './IconComponent'
+import GoodsComponent from './goodsComponent'
+
 
 
 const styles = StyleSheet.create({
@@ -27,7 +29,9 @@ class BusinessPage extends React.Component {
         return (
             <View style={styles.container}>
                 <IconComponent/>
-                
+                <GoodsComponent busType="1"  titleHead="套餐商品" titleTail="更多"/>
+                <GoodsComponent busType="5"  titleHead="推荐业务" titleTail="更多"/>
+                <GoodsComponent busType="4"  titleHead="精选配件" titleTail="更多"/>
             </View>
         )
     }
