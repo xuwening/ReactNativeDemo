@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
         flex: -1,
         alignItems: 'center',
         marginTop: 8,
+        
     },
 
     goodsItems: {
@@ -97,6 +98,7 @@ class GoodItems extends React.Component {
         )
     }
 }
+
 
 class TitleComponent extends React.Component {
 
@@ -181,6 +183,17 @@ const shopStyles = StyleSheet.create({
         flexWrap: 'wrap',
     },
 
+    itemTouchable: {
+        flex: -1, 
+        flexDirection: 'row', 
+        flexGrow: 1, 
+        borderColor: 'gray',
+        borderTopWidth: 0.5, 
+        borderRightWidth: 0.5, 
+        marginRight: -0.5, 
+        
+    },
+
     itemContainer: {
         flex: -1,
         flexDirection: 'row',
@@ -223,7 +236,7 @@ class ShopItem extends React.Component {
         const {imgUrl, text1, text2, text3} = this.props
 
         return (
-            <TouchableOpacity style={{flex: -1, flexDirection: 'row', flexGrow: 1}}>
+            <TouchableOpacity style={shopStyles.itemTouchable}>
                 <View style={shopStyles.itemContainer}>
                     <Image style={shopStyles.image} source={{uri: imgUrl}}/>
                     <View style={shopStyles.textContainer}>
