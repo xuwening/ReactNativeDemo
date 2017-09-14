@@ -180,12 +180,12 @@ const shopStyles = StyleSheet.create({
         flexDirection: 'row',
         flexWrap: 'wrap',
     },
+
     itemContainer: {
         flex: -1,
         flexDirection: 'row',
-        borderColor: 'gray',
         margin: 8,
-        flexGrow: 1,
+        // flexGrow: 1,
     },
 
     image: {
@@ -223,7 +223,7 @@ class ShopItem extends React.Component {
         const {imgUrl, text1, text2, text3} = this.props
 
         return (
-            
+            <TouchableOpacity style={{flex: -1, flexDirection: 'row', flexGrow: 1}}>
                 <View style={shopStyles.itemContainer}>
                     <Image style={shopStyles.image} source={{uri: imgUrl}}/>
                     <View style={shopStyles.textContainer}>
@@ -232,7 +232,7 @@ class ShopItem extends React.Component {
                         <Text style={shopStyles.text3}>{text3}</Text>
                     </View>
                 </View>
-            
+            </TouchableOpacity>
         )
     }
 }
