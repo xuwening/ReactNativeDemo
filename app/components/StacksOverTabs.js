@@ -17,7 +17,7 @@ import Mine from './Mine'
 import Chat from './Chat'
 import Shopping from './shopping'
 
-import BusinessPage from './businessPage'
+import BusinessPage from './business/businessPage'
 
 const MyNavScreen = ({ navigation, banner }) => (
   <ScrollView>
@@ -40,6 +40,7 @@ const MyNavScreen = ({ navigation, banner }) => (
 
 const MyHomeScreen = ({ navigation }) => (
   <HomePage banner="Home Screen" navigation={navigation} />
+  // <BusinessPage navigation={navigation} />
 );
 
 const MyProfileScreen = ({ navigation }) => (

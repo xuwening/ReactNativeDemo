@@ -95,10 +95,10 @@ class IconButton extends React.Component {
 
     render() {
 
-        const {imageUrl, buttonTitle, buttonAction} = this.props
-
+        const {imageUrl, buttonTitle, actionUrl} = this.props
+        console.log('nativagtion:', this.props.navigation)
         return (
-            <TouchableOpacity onPress={buttonAction}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('secondPage', { actionUrl: actionUrl })}>
                 <View style={styles.iconList}>
                     <Image style={styles.iconButton} source={{uri: imageUrl}}></Image>
                     <Text style={styles.iconText} >{buttonTitle}</Text>
@@ -112,14 +112,18 @@ class IconComponet extends React.Component {
     
     render() {
 
+        const {icons} = this.props
+
         return (
             <View style={styles.container}>
-                <SearchBar />
+                <SearchBar navigation={this.props.navigation}/>
                 <View style={styles.iconListContainer}>
-                    <IconButton imageUrl="https://app.10086.cn/group1/M00/00/63/rBCJYFcDHumAKaC2AAAPcDAVm2M159.png" buttonTitle="我的订单"/>
-                    <IconButton imageUrl="https://app.10086.cn/group1/M00/00/63/rBCJYVcDHzWAS0NvAAAP_lVAogg488.png" buttonTitle="收货地址"/>
-                    <IconButton imageUrl="https://app.10086.cn/group1/M00/00/63/rBCJYFcDIqiACCPPAAANdhbz80o947.png" buttonTitle="发票管理"/>
-                    <IconButton imageUrl="https://app.10086.cn/group2/M00/00/6B/rBCJYlcDIyaAZzq3AAAPEbUdTCM514.png" buttonTitle="我的收藏"/>
+                {
+                    icons.map((icon) => {
+                        return(<IconButton imageUrl={icon.iconUrl} buttonTitle={icon.iconName} actionUrl={icon.actionUrl} navigation={this.props.navigation}/>)
+                    })
+                }
+
                 </View>
             </View>
         )

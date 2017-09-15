@@ -7,8 +7,8 @@ import * as reducers from '../reducers';
 import MainApp from './MainApp';
 
 import createSagaMiddleware from 'redux-saga'
-import mySaga from '../sagas/sagas'
-import mySaga1 from '../sagas/sagas1'
+// import mySaga from '../sagas/sagas'
+import businessSaga from '../sagas/businessPageSaga'
 
 const sagaMiddleware = createSagaMiddleware()
 
@@ -29,6 +29,6 @@ export default class App extends Component {
   }
 }
 
-sagaMiddleware.run(mySaga)
+sagaMiddleware.run(businessSaga)
 
 

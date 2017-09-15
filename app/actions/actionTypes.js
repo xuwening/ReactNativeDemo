@@ -7,3 +7,14 @@ export const TEXTINPUT = 'TEXTINPUT';
 export const UPDATEPICS = 'UPDATEPICS';
 
 export const INCREMENTASYNC = 'INCREMENTASYNC';
+
+
+
+//business
+//============================================
+
+export const UPDATAICONLIST = 'UPDATAICONLIST'
+export const UPDATAFLOORLIST = 'UPDATAFLOORLIST'
+
+export const QUERYICONLIST = 'QUERYICONLIST'
+export const QUERYFLOORLIST = 'QUERYFLOORLIST'
