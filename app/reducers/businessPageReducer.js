@@ -9,8 +9,6 @@ const inititalState = {
 
 export default function businessPageReducer(state = inititalState, action) {
 
-    console.log('recv action:', action)
-
     switch (action.type) {
         case types.UPDATAICONLIST:
             

@@ -35,13 +35,11 @@ class ContentComponent extends React.Component {
     returnContent(busType, items, itemAction) {
         if (busType === '1' || busType === '4') {
             const adverlist = items[0].adverList
-            console.log('adverlist: ', adverlist)
             return adverlist.map((obj) => {
                 return (<GoodItems busType={busType} text1={obj.prodName} text2={obj.prodSubhead} text3={obj.price} imageUrl={obj.pictureUrl} itemAction={itemAction}/>)
             })
         } else {
             const adverlist = items[0].adverList
-            console.log('adverlist: ', adverlist)
             return adverlist.map((obj) => {
                 return (<GoodItems text1={obj.prodName} text3={obj.price} imageUrl={obj.pictureUrl} itemAction={itemAction}/>)
             })

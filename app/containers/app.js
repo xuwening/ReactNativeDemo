@@ -21,6 +21,7 @@ const store = createStoreWithMiddleware(reducer);
 export default class App extends Component {
   render() {
 
+    console.log('launch option:', this.props.name, this.props.age)
     return (
           <Provider store={store}>
             <MainApp />

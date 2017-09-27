@@ -13,7 +13,6 @@ function fetchPostRequest(url) {
                 
                 resolve(json.rspBody)
             } else {
-                console.log('parse json data format error.', json.rspBody.dirList)
                 throw new Error('parse json data format error.')
             }
         })
@@ -29,7 +28,6 @@ function* iconListGenerator(action) {
     try {
         const res = yield call(fetchPostRequest, action.url)
         const iconList = res.dirList
-         console.log('list res:', iconList)
          const icons = []
          iconList[0].iconList.map((obj) => {
              icons.push({

@@ -45,8 +45,6 @@ class ShopComponent extends React.Component {
                 adverlist.push(...obj.adverList)
             })
 
-            console.log('adverlist shop component: ', adverlist)
-    
             return (
                 <View style={{flex: 1, backgroundColor: 'white', marginTop: 6}}>
                     <TitleComponent busType={busType} text1={titleHead} text2={titleTail} />

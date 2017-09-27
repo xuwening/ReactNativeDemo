@@ -96,7 +96,6 @@ class IconButton extends React.Component {
     render() {
 
         const {imageUrl, buttonTitle, actionUrl} = this.props
-        console.log('nativagtion:', this.props.navigation)
         return (
             <TouchableOpacity onPress={() => this.props.navigation.navigate('secondPage', { actionUrl: actionUrl })}>
                 <View style={styles.iconList}>

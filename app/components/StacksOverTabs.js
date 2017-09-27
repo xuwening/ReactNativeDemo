@@ -39,8 +39,8 @@ const MyNavScreen = ({ navigation, banner }) => (
 );
 
 const MyHomeScreen = ({ navigation }) => (
-  <HomePage banner="Home Screen" navigation={navigation} />
-  // <BusinessPage navigation={navigation} />
+  // <HomePage banner="Home Screen" navigation={navigation} />
+  <BusinessPage navigation={navigation} />
 );
 
 const MyProfileScreen = ({ navigation }) => (
@@ -55,8 +55,8 @@ const MyNotificationsSettingsScreen = ({ navigation }) => (
 );
 
 const MySettingsScreen = ({ navigation }) => (
-  // <Counter banner="Settings Screen" navigation={navigation} />
-  <BusinessPage navigation={navigation} />
+  <Counter banner="Settings Screen" navigation={navigation} />
+  // <BusinessPage navigation={navigation} />
 );
 
 const MyCatsScreen = ({ navigation }) => (
